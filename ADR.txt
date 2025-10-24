@@ -1,0 +1,16 @@
+ADR: FocusTasks 6092
+
+Decision 1 — Semantic HTML
+Used <header>, <main>, <section>, and <ul> for accessibility. Labels and keyboard focus rings are applied.
+
+Decision 2 — State Handling
+A closure-based store encapsulates state and syncs with localStorage, avoiding global mutation.
+
+Decision 3 — Responsiveness
+One media query at 481px switches layout from stacked (mobile) to side-by-side (desktop).
+
+Decision 4 — Validation & Escaping
+Empty tasks are rejected with an inline error. User input is safely escaped using textContent and escapeHTML() to prevent XSS.
+
+Decision 5 — Event Delegation
+One listener on the main wrapper handles all add, toggle, and delete actions efficiently.

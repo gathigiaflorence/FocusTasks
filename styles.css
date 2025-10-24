@@ -1,0 +1,126 @@
+:root {
+  --gap: 1rem;
+  --max-width: 960px;
+  --bg: #f3f6fa;
+  --card: #ffffff;
+  --accent: #0059ff;
+  --accent-light: #e8f0ff;
+  --danger: #e53935;
+  --text: #222;
+  --muted: #667;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --transition: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.site-header {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#app-title {
+  color: var(--accent);
+  margin: 0;
+}
+
+.analytics {
+  font-size: 0.95rem;
+  color: var(--muted);
+  background: var(--accent-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.column {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccd;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0042cc;
+}
+
+.error {
+  color: var(--danger);
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accent-light);
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+}
+
+.task .title {
+  flex: 1;
+}
+
+@media (min-width: 481px) {
+  .container {
+    flex-direction: row;
+  }
+  .column {
+    flex: 1;
+  }
+}
