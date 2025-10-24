@@ -7,4 +7,4 @@ styles.css – Handles page styling and layout
 app.js – Contains the main logic and event handling
 Dockerfile – Used to containerize and run the project with Docker
 
-You can open the live at 
+You can open the live at https://gathigiaflorence.github.io/FocusTasks/
